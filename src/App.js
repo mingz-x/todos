@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import axios from 'axios'
+import './assets/css/todos.scss';
+import store from './state/store';
+import Insert from './component/Insert';
+import List from './component/List';
+import Sort from './component/Sort';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='todolist'>
+      <h2>Todos</h2>
+      <div className='wrap'>
+        <Insert/>
+        <List/>
+        <Sort/>
+      </div>
     </div>
   );
 }

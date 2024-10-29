@@ -1,0 +1,24 @@
+funtion App(){
+
+const {data, dataCtrl} = store();
+  console.log(data);
+
+  /*
+    1. get, delete (url,option)
+    2. post, put (url,body,option)
+  */
+
+  useEffect(()=>{
+    /*
+      axios.delete('http://localhost:4000?id=1', {name:'테스트'})
+      .then(res=>{
+        console.log(res.data);
+      })
+    */
+
+    // dataCtrl({type:'post', data:{id:10,name:"honggildong"}});
+  },[])
+
+  return()
+}
+export default App
